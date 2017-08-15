@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Living Goods</title>
+	<link rel="icon" type="image/png" href="/img/lg.PNG"/> 
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet"/>
+
+    <!-- optiscroll CSS -->
+    <link href="css/optiscroll.css" rel="stylesheet"/>
+
+</head>
+
+<body data-ng-app="mainApp" data-ng-controller="mainController">
+
+    <div id="logo"></div>
+
+    <div id="apps" class="optiscroll">
+        <div class="container-fluid appsContainer" data-ng-repeat="category in landCategories">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 categoryLB"><p>{{category.name}}</p></div>
+                <div class="app col-xs-12 col-sm-6 col-md-4 col-lg-3" data-ng-repeat="app in category.apps">
+                    <div class="appImg" style="background-image: url({{app.image}});"></div>
+                    <a class="appLink" href="{{app.link}}">{{app.name}}</a>
+                    <p class="appDesc">{{app.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Copyright &copy; Living Goods 2017. All Rights Reserved
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- angular.js -->
+    <script src="js/angular.min.js"></script>
+
+    <!-- optiscroll.js for custom scroll bars -->
+    <script type="text/javascript" src="js/optiscroll.min.js"></script>
+
+    <!-- script that gets data from the Database -->
+    <script src="js/data_controller.js"></script>
+
+</body>
+
+</html>

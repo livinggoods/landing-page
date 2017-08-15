@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Living Goods</title>
+	<link rel="icon" type="image/png" href="/img/lg.PNG"/> 
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="/css/landing-page.css" rel="stylesheet"/>
+
+    <!-- editor css -->
+    <link rel="stylesheet" type="text/css" href="css/editor.css">
+
+    <!-- optiscroll CSS -->
+    <link href="/css/optiscroll.css" rel="stylesheet"/>
+
+</head>
+
+<body data-ng-app="mainApp" data-ng-controller="mainController">
+
+    <div id="logo"></div>
+
+    <!-- Navigation -->
+    <nav id="nav" class="col-lg-6 col-lg-offset-6" data-ng-init="getLinks()">
+    	<div id="lnkEdTrigger" data-ng-click="linkEditor()" class="col-lg-2 glyphicon glyphicon-pencil">
+    		<!-- this triggers the link editor -->
+    	</div>
+        <div class="col-lg-10">
+            <div class="col-sm-12 col-md-4 col-lg-4" data-ng-repeat="link in links">
+                <a class="link" href="{{link.URL}}">{{link.name}}</a>
+            </div>
+        </div>
+    </nav>
+    <div id="lnkEd" class="lnkHidden col-lg-6 col-lg-offset-3">
+        <h2 class="col-lg-9">Links</h2>
+        <div id="closeLnkEd" class="col-lg-3 glyphicon glyphicon-remove" data-ng-click="linkEditor()">
+            
+        </div>
+        <div class="col-lg-12 optiscroll" id="linksContainer">
+            <div class="edLinks col-lg-12 col-md-12 col-sm-12 col-xs-12" data-ng-repeat="link in links">
+                <h4 class="col-lg-12">{{link.name}}</h4>
+                <label class="col-lg-12 col-md-12">Name:</label>
+                <input class="col-lg-12 col-md-12" type="text" name="" value="{{link.name}}">
+                <label class="col-lg-12 col-md-12">URL:</label>
+                <input class="col-lg-12 col-md-12" type="text" name="" value="{{link.URL}}">
+            </div>
+            <div class="edLinks col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h3 class="col-lg-12">Add a new link</h3>
+                <label class="col-lg-12 col-md-12">Name:</label>
+                <input class="col-lg-12 col-md-12" type="text" name="" data-ng-model="name">
+                <label class="col-lg-12 col-md-12">URL:</label>
+                <input class="col-lg-12 col-md-12" type="text" name="" data-ng-model="url">
+                <input class="col-lg-12" type="submit" name="" data-ng-click="addLink()" value="Add link">
+            </div>
+        </div>
+   </div>
+    
+    <div id="apps" class="optiscroll" data-ng-init="getCategories()">
+        <div class="col-lg-12 appsContainer" data-ng-repeat="category in landCategories">
+        	<div class="catEdTrigger col-lg-2 glyphicon glyphicon-pencil" data-ng-click="categoryEditor(category)">
+        		<!-- this triggers the category editor -->
+        	</div>
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 categoryLB"><p>{{category.name}}</p></div>
+            <div class="app col-xs-12 col-sm-6 col-md-4 col-lg-3" data-ng-repeat="app in category.apps">
+                <div class="appImg" style="background-image: url({{app.image}});"></div>
+                <a class="appLink" href="{{app.link}}">{{app.name}}</a>
+                <p class="appDesc">{{app.description}}</p>
+            </div>
+        </div>
+        <div id="addCateory">
+        	<!-- this triggers adding the category to the DB -->
+        </div>
+    </div>
+
+    <div id="catEd" class="catHidden col-lg-6 col-lg-offset-3">
+        <h2 class="col-lg-9">{{editedCategory.name}}</h2>
+        <div class="col-lg-3 glyphicon glyphicon-remove" id="clsCategory" data-ng-click="closeCatEditor()"></div>
+        <div class="col-lg-12 optiscroll" id="catEdScroll">
+            <div data-ng-repeat="app in editedCategory.apps" class="col-lg-12 app">
+                <h4 class="col-lg-12">{{app.name}}</h4>
+                <div style="background-image: url({{app.image}}); background-size:cover; height: 300px; border: 2px;" class="col-lg-6"></div>
+                <!-- image -->
+                <h5 class="col-lg-12">URL</h5>
+                <input type="text" name="" placeholder="{{app.link}}" class="col-lg-12">
+                <!-- URL -->
+                <h5 class="col-lg-12">Description</h5>
+                <input type="textarea" name="" placeholder="{{app.description}}" class="col-lg-12"> 
+                <!-- Description -->
+            </div>
+            <h3 class="col-lg-12">Add a new application</h3>
+            <form class="col-lg-12" class="app">
+                <h4 class="col-lg-12">Application Name</h4>
+                <input class="col-lg-12" type="text" name="" placeholder="The application's name" data-ng-model="newApp.name" required>
+                <div style="background-image: url({{newApp.image}}); background-size:cover; height: 300px; border: 2px;" class="col-lg-6"></div>
+                <!-- image -->
+                <h5 class="col-lg-12">URL</h5>
+                <input type="text" name="" placeholder="The application's URL" class="col-lg-12" data-ng-model="newApp.link" required>
+                <!-- URL -->
+                <h5 class="col-lg-12">Description</h5>
+                <input type="textarea" name="" placeholder="The application's description" class="col-lg-12" data-ng-model="newApp.description" required> 
+                <!-- Description -->
+                <input id="addBtn" type="submit" name="" class="col-lg-12" value="Add">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        Copyright &copy; Living Goods 2017. All Rights Reserved
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- angular.js -->
+    <script src="/js/angular.min.js"></script>
+
+    <!-- optiscroll.js for custom scroll bars -->
+    <script type="text/javascript" src="/js/optiscroll.min.js"></script>
+
+    <!-- script that gets data from the Database -->
+    <script src="js/update.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+#nav{
+	position: absolute;
+	top: 5%;
+	z-index: 4;
+}
+/*	Link Editor	*/
+#lnkEdTrigger{
+	cursor: pointer;
+	font-size: 2em;
+	text-align: center;
+	height: 50px;
+}
+
+
+#lnkEd {
+	position: absolute;
+	height: 90%;
+	z-index: 5;
+	top: 5%;
+	background-color: #fff;
+	box-shadow: 0px 0px 7px #777;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+#lnkEd h2{
+	font-family: abril;
+}
+
+#lnkEd h3{
+	text-align: center;
+}
+
+#lnkEd h4{
+	font-family: latoB;
+}
+
+#lnkEd label{
+	font-family: lato;
+	font-size: 0.9em;
+}
+
+.lnkVisible{
+	opacity: 1;
+	transition: all 0.1s ease;
+}
+
+#linksContainer{
+	height: 80%;
+}
+
+.lnkHidden{
+	width: 0%;
+	height: 0%;
+	opacity: 0;
+	transition: all 0.1s ease;
+}
+
+.edLinks{
+	margin-bottom: 17px;
+}
+
+#addLink{
+	background-color: #400;
+}
+
+#saveBtn{
+	background-color: #040;
+}
+
+#closeLnkEd{
+	font-size: 2em;
+	text-align: right;
+	top: 13px;
+    cursor: pointer;
+}
+
+#lnkBtns{
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+
+#closeLnkEd div:nth-child(1){
+	background-color: #444;
+	position: absolute;
+	width: 40px;
+	height: 5px;
+	border-radius: 3px;
+	transform: translateY(20px) rotate(45deg);
+}
+
+#closeLnkEd div:nth-child(2){
+	background-color: #444;
+	position: absolute;
+	width: 40px;
+	height: 5px;
+	border-radius: 3px;
+	transform: translateY(20px) rotate(-45deg);
+}
+
+/*	Link Editor	*/
+
+.catEdTrigger{
+	font-size: 2em;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+#catEd{
+	position: absolute;
+	z-index: 5;
+	top: 5%;
+	height: 90%;
+	background-color: #fff;
+	overflow: hidden;
+	box-shadow: 0px 0px 7px #777;
+	border-radius: 3px;
+}
+
+#catEd h2{
+	font-family: abril;
+}
+
+#catEd h3{
+	text-align: center;
+}
+
+#catEd h4{
+	font-family: latoB;
+}
+
+#catEd h5{
+	font-family: lato
+}
+
+#catEdScroll{
+	height: 85%;
+}
+
+#clsCategory{
+	font-size: 2em;
+	text-align: right;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.catVisible{
+	opacity: 1;
+	transition: all 0.1s ease;
+}
+
+.catHidden{
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+	transition: all 0.1s ease;
+}
+
+.app{
+	margin-bottom: 13px;
+}
+
+input[type=submit]{
+	border: 5px solid #333;
+	height: 40px;
+	border: none;
+	margin: 10px 0px;
+}

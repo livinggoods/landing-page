@@ -1,0 +1,137 @@
+@font-face{
+    font-family: abril;
+    src: url(../fonts/AbrilFatface-Regular.otf);
+}
+
+@font-face{
+    font-family: latoB;
+    src: url(../fonts/Lato-BoldItalic.ttf);
+}
+
+@font-face{
+    font-family: lato;
+    src: url(../fonts/Lato-Light.ttf);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    padding: 15px 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    font-size: 0.9em;
+    font-family: lato;
+    font-weight: 600;
+}
+
+#logo{
+    background-image: url(/img/lg.PNG);
+    background-size: cover;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 70px;
+    height: 70px;
+}
+
+.optiscroll-vtrack:hover {
+    width: 7px;
+    cursor: pointer;
+}
+
+#apps{
+    width: 98.5%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.app{
+    height: 500px;
+}
+
+.appsContainer{
+    box-sizing: border-box;
+    border-bottom: 1px dotted #555;
+    margin-top: 30px;
+}
+
+.categoryLB{
+    font-size: 2.5em;
+    font-family: abril;
+    color: #555;
+}
+
+.categoryLB > p{
+    transform: translateX(5%);
+    width: 50%;
+}
+
+.app .appImg{
+    height: 66.66%;
+    width: 100%;
+    background-size: cover;
+}
+
+.app .appLink{
+    position: absolute;
+    cursor: pointer;
+    top: 62%;
+    font-size: 1.6em;
+    font-family: latoB;
+    left: 10%;
+    background-color: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    color: 333;
+    text-decoration: none;
+}
+
+.app .appLink:hover{
+    color: #444;
+    text-decoration: none;
+}
+
+.app .appDesc{
+    height: 25%;
+    width: 100%;
+    padding: 5% 3%;
+    font-size: 1.2em;
+    font-family: lato;
+    border-bottom: 1px solid #555;
+    border-right: 1px solid #555;
+    border-left: 1px solid #555;
+}
+
+.navigation{
+    position: absolute;
+    height: 50px;
+    width: 42.33%;
+    right: 0px;
+    top: 25px;
+    font-family: latoB;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 1% 0%;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.link{
+    color: #333;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #444;
+    text-decoration: none;
+}
