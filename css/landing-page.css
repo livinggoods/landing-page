@@ -89,20 +89,18 @@ footer{
 }
 
 .app .appLink{
-    position: absolute;
+    width: 100%;
+    display: block;
     cursor: pointer;
-    top: 45%;
     font-size: 1.6em;
     font-family: latoB;
     text-align: center;
-    width: 60%;
-    left: 0px;
-    right: 0px;
-    margin: auto;
     background-color: #fff;
     padding: 5px;
     box-sizing: border-box;
-    color: 333;
+    box-shadow: 0px 0px 5px #777;
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
     text-decoration: none;
 }
 
