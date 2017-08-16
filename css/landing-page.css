@@ -38,6 +38,7 @@ footer{
 #logo{
     background-image: url(/img/LG_logo_Blue_Vector.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
     height: 100%;
 }
