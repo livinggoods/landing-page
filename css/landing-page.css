@@ -16,7 +16,7 @@
 body{
     height: 100vh;
     width: 100vw;
-    padding: 15px 0px;
+    padding-bottom: 17px;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -31,16 +31,14 @@ footer{
     font-weight: 600;
 }
 
+#nav{
+    height: 10%;
+}
+
 #logo{
-    background-image: url(/img/logo.png);
+    background-image: url(/img/LG_logo_Blue_Vector.eps);
     background-size: cover;
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    width: 70px;
-    height: 70px;
+    height: 100%;
 }
 
 .optiscroll-vtrack:hover {
@@ -49,15 +47,14 @@ footer{
 }
 
 #apps{
-    width: 98.5%;
-    height: 100%;
+    height: 90%;
     margin: auto;
     overflow: hidden;
     background-color: #efefef;
 }
 
 .app{
-    height: 450px;
+    height: 440px;
     margin-bottom: 17px;
 }
 
