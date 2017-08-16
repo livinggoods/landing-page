@@ -19,20 +19,5 @@ mainApp.controller('mainController', ['$scope', '$window', '$http', function($sc
         for (var app in response) {
         	$scope.landCategories.push(response[app]);
         }
-        console.log($scope.landCategories);
-    });
-
-    $http({
-        method: "GET",
-        url: "php/front-end_endpoint.php",
-        params:{
-        	data:'links'
-        }
-    }).success(function(response){
-        $scope.links = [];
-        for (var link in response) {
-        	$scope.links.push(response[link]);
-        }
-        //console.log($scope.links);
     });
 }]);
