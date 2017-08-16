@@ -82,6 +82,7 @@ footer{
     width: 100%;
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     border-top: 1px solid #555;
     border-left: 1px solid #555;
     border-right: 1px solid #555;
