@@ -80,7 +80,8 @@ footer{
 .app .appImg{
     height: 40%;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     border-top: 1px solid #555;
     border-left: 1px solid #555;
     border-right: 1px solid #555;
