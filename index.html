@@ -18,19 +18,19 @@
 
 </head>
 
-<body data-ng-app="mainApp" data-ng-controller="mainController">
+<body data-ng-app="mainApp" class="container-fluid" data-ng-controller="mainController">
 
-    <div id="logo"></div>
+    <div id="nav" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div id="logo" class="col-lg-4 col-lg-offset-4"></div>
+    </div>
 
-    <div id="apps" class="optiscroll">
-        <div class="container-fluid appsContainer" data-ng-repeat="category in landCategories">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 categoryLB"><p>{{category.name}}</p></div>
-                <div class="app col-xs-12 col-sm-6 col-md-3 col-lg-5ths" data-ng-repeat="app in category.apps">
-                    <div class="appImg" style="background-image: url({{app.image}});"></div>
-                    <a class="appLink" href="{{app.link}}">{{app.name}}</a>
-                    <p class="appDesc">{{app.description}}</p>
-                </div>
+    <div id="apps" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 optiscroll">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-ng-repeat="category in landCategories">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 categoryLB"><p>{{category.name}}</p></div>
+            <div class="app col-xs-12 col-sm-6 col-md-3 col-lg-5ths" data-ng-repeat="app in category.apps">
+                <div class="appImg" style="background-image: url({{app.image}});"></div>
+                <a class="appLink" href="{{app.link}}">{{app.name}}</a>
+                <p class="appDesc">{{app.description}}</p>
             </div>
         </div>
     </div>
