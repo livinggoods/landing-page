@@ -57,7 +57,7 @@ footer{
 }
 
 .app{
-    height: 400px;
+    height: 450px;
     margin-bottom: 17px;
 }
 
@@ -79,7 +79,7 @@ footer{
 }
 
 .app .appImg{
-    height: 50%;
+    height: 40%;
     width: 100%;
     background-size: cover;
     border-top: 1px solid #555;
@@ -90,6 +90,7 @@ footer{
 
 .app .appLink{
     width: 100%;
+    height: 10%;
     display: block;
     cursor: pointer;
     font-size: 1.6em;
