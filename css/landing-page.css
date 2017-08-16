@@ -32,7 +32,7 @@ footer{
 }
 
 #logo{
-    background-image: url(/img/lg.PNG);
+    background-image: url(/img/logo.png);
     background-size: cover;
     position: absolute;
     top: 15px;
@@ -146,4 +146,40 @@ footer{
 .link:hover{
     color: #444;
     text-decoration: none;
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }
