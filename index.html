@@ -25,7 +25,7 @@
     </div>
 
     <div id="apps" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 optiscroll">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-ng-repeat="category in landCategories">
+        <div data-ng-repeat="category in landCategories" class="category">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 categoryLB"><p>{{category.name}}</p></div>
             <div class="app col-xs-12 col-sm-6 col-md-3 col-lg-5ths" data-ng-repeat="app in category.apps" data-ng-click="launch(app.link)">
                 <div class="appFrame">
