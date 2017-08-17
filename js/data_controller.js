@@ -20,4 +20,9 @@ mainApp.controller('mainController', ['$scope', '$window', '$http', function($sc
         	$scope.landCategories.push(response[app]);
         }
     });
+
+    $scope.launch = function (url) {
+      var win = window.open(url, '_blank');
+      win.focus();
+    }
 }]);
