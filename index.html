@@ -8,7 +8,10 @@
 	<link rel="icon" type="image/png" href="/img/lg.PNG"/> 
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/bootstrap-4/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet"/>
@@ -20,14 +23,30 @@
 
 <body data-ng-app="mainApp" class="container-fluid" data-ng-controller="mainController">
 
-    <div id="nav" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div id="logo" class="col-lg-4 col-lg-offset-4"></div>
+    <div class="row" id="nav">
+        <div id="logo" class="col-4 col-sm-4 col-md-4 col-xl-4 col-lg-4" data-ng-click="launch('https://livinggoods.org/')"></div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="row" id="links">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <div id="workplace"></div>
+                </div>
+                <div data-ng-click="launch('https://www.twitter.com/Living_Goods')" 
+                    class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 fa fa-twitter"
+                    ></div>
+                <div data-ng-click="launch('https://www.facebook.com/livinggoods.org/')"
+                    class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 fa fa-facebook"
+                    ></div>
+            </div>
+        </div>
     </div>
-
-    <div id="apps" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 optiscroll">
-        <div data-ng-repeat="category in landCategories" class="category">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 categoryLB"><p>{{category.name}}</p></div>
-            <div class="app col-xs-12 col-sm-6 col-md-3 col-lg-5ths" data-ng-repeat="app in category.apps" data-ng-click="launch(app.link)">
+    <div id="apps" class="row optiscroll">
+        <div data-ng-repeat="category in landCategories" class="row category">
+            <div class="categoryLB col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row">
+                    <p class="col-md-4 col-lg-4 col-xl-4">{{category.name}}</p>
+                </div>
+            </div>
+            <div class="app col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" data-ng-repeat="app in category.apps">
                 <div class="appFrame">
                     <div class="appImg" style="background-image: url({{app.image}});"></div>
                     <p class="appLink">{{app.name}}</p>
@@ -36,16 +55,18 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        Copyright &copy; Living Goods 2017. All Rights Reserved
-    </footer>
+    <div class="row">
+        <footer>
+            Copyright &copy; Living Goods 2017. All Rights Reserved
+        </footer>
+    </div>
+    
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>
 
     <!-- angular.js -->
     <script src="js/angular.min.js"></script>
