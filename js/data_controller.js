@@ -16,8 +16,8 @@ mainApp.controller('mainController', ['$scope', '$window', '$http', function($sc
         }
     }).success(function(response){
         $scope.landCategories = [];
-        for (var app in response) {
-        	$scope.landCategories.push(response[app]);
+        for (var category in response.categories) {
+        	$scope.landCategories.push(response.categories[category]);
         }
     });
 
