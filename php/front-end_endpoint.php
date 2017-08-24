@@ -24,16 +24,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 				while ($lnkrow = $result->fetch_assoc()) {
 					$link_id = $lnkrow['id'];
 					$link_url = $lnkrow['url'];
+					$link_name = $lnkrow['name'];
 					if (in_array($link_id, $links_array)) {
 						$links_array[$link_id]['count']++;
-						array_push($links_array[$link_id]['urls'], $link_url);
+
+						$links_array[$link_id]['urls'][$link_name]['url'] = $link_url;
+						$links_array[$link_id]['urls'][$link_name]['name'] = $link_name;
 					}else{
 						array_push($links_array, $link_id);
 						$links = array();
 						$links['count'] = 1;
 						$links['urls'] = array();
 
-						array_push($links['urls'], $link_url);
+						$links['urls'][$link_name]['url'] = $link_url;
+						$links['urls'][$link_name]['name'] = $link_name;
+
 						$links_array[$link_id] = $links;
 					}
 				}
@@ -52,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 					$app_name = $row['name'];
 					$app_image = $row['image'];
 					$app_description = $row['description'];
+					$app_priority = $row['priority'];
 					$app_id = $row['id'];
 					if (array_key_exists($category_name, $data_array)) {
 						if (!array_key_exists($app_name, $data_array[$category_name]['apps'])) {
@@ -59,15 +65,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 							$tmp_app['image'] = $app_image;
 							$tmp_app['links'] = $links_array[$app_id];
 							$tmp_app['description'] = $app_description;
+							$tmp_app['priority'] = $app_priority;
 
 							$data_array[$category_name]['apps'][$app_name] = $tmp_app;
 						}
-						echo "in array";
 					}else{
 						$tmp_app['name'] = $app_name;
 						$tmp_app['image'] = $app_image;
 						$tmp_app['links'] = $links_array[$app_id];
 						$tmp_app['description'] = $app_description;
+						$tmp_app['priority'] = $app_priority;
 
 						array_push($category_name, $data_array);
 						$data_array[$category_name]['name'] = $category_name;
