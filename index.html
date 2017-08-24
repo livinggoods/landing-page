@@ -46,11 +46,17 @@
                     <p class="col-md-4 col-lg-4 col-xl-4">{{category.name}}</p>
                 </div>
             </div>
-            <div class="app col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" data-ng-repeat="app in category.apps">
-                <div class="appFrame">
+            <div class="app col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" data-ng-repeat="app in category.apps | toArray:true | orderBy:'priority'">
+                <div class="appFrame" data-ng-if="app.links.count==1" data-ng-click="launch(app.links.urls[0])">
                     <div class="appImg" style="background-image: url({{app.image}});"></div>
                     <p class="appLink">{{app.name}}</p>
                     <p class="appDesc">{{app.description}}</p>
+                </div>
+                <div class="appFrame2" data-ng-if="app.links.count > 1">
+                    <div class="appImg" style="background-image: url({{app.image}});"></div>
+                    <p class="appLink">{{app.name}}</p>
+                    <p class="appDesc2">{{app.description}}</p>
+                    <label data-ng-repeat="(link, url) in app.links.urls">{{url.name}}</label>
                 </div>
             </div>
         </div>
