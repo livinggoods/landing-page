@@ -43,6 +43,39 @@ footer{
     height: 100%;
 }
 
+#links{
+    height: 100%;
+}
+
+#links div{
+    height: 100%;
+    color: #468;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+#links div:hover{
+    color: #47b;
+    cursor: pointer;
+}
+
+#workplace{
+    width: 25px;
+    margin: auto;
+    background-image: url(/img/fb-workplace.png);
+    background-size: cover;
+    background-color: #468;
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#workplace:hover{
+    background-color: #47b;
+}
+
 .optiscroll-vtrack:hover {
     width: 7px;
     cursor: pointer;
@@ -51,7 +84,6 @@ footer{
 .category{
     background-color: #fff;
     margin: 10px 0px;
-    box-shadow: 0px 0px 5px;
 }
 
 #apps{
@@ -61,7 +93,7 @@ footer{
 }
 
 .app{
-    height: 400px;
+    height: 450px;
     margin-bottom: 17px;
 }
 
@@ -73,8 +105,9 @@ footer{
 
 .categoryLB{
     font-size: 2.1em;
-    font-family: abril;
-    color: #555;
+    font-weight: 600;
+    font-family: lato;
+    color: #222;
 }
 
 .categoryLB > p{
@@ -98,6 +131,28 @@ footer{
     transition: all 0.2s ease;
 }
 
+.appFrame2{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0px;
+    overflow: hidden;
+    border: 1px solid #555;
+    box-shadow: 0px 0px 5px #666;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.appFrame2{
+    box-shadow: 0px 0px 13px #666;
+    transition: all 0.2s ease;
+}
+
+.appFrame2 > label{
+    text-align: center;
+    height: 10%;
+    width: 50%;
+}
+
 .app .appImg{
     height: 40%;
     width: 100%;
@@ -111,6 +166,7 @@ footer{
     margin-bottom: 0px;
     font-size: 1.3em;
     font-family: latoB;
+    color: #333;
     text-align: center;
     padding: 5px;
     box-sizing: border-box;
@@ -118,69 +174,18 @@ footer{
 }
 
 .app .appDesc{
-    height: 50%;
     width: 100%;
     padding: 5% 3%;
     font-size: 1.1em;
     font-family: lato;
-}
-
-.navigation{
-    position: absolute;
-    height: 50px;
-    width: 42.33%;
-    right: 0px;
-    top: 25px;
-    font-family: latoB;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 1% 0%;
-    box-sizing: border-box;
-    z-index: 3;
-}
-
-.link{
-    color: #333;
-    text-decoration: none;
-}
-
-.link:hover{
     color: #444;
-    text-decoration: none;
 }
 
-.col-xs-5ths,
-.col-sm-5ths,
-.col-md-5ths,
-.col-lg-5ths {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.col-xs-5ths {
-    width: 20%;
-    float: left;
-}
-
-@media (min-width: 768px) {
-    .col-sm-5ths {
-        width: 20%;
-        float: left;
-    }
-}
-
-@media (min-width: 992px) {
-    .col-md-5ths {
-        width: 20%;
-        float: left;
-    }
-}
-
-@media (min-width: 1200px) {
-    .col-lg-5ths {
-        width: 20%;
-        float: left;
-    }
+.app .appDesc2{
+    height: 40%;
+    width: 100%;
+    padding: 5% 3%;
+    font-size: 1.1em;
+    font-family: lato;
+    color: #444;
 }
