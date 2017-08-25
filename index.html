@@ -40,7 +40,7 @@
         </div>
     </div>
     <div id="apps" class="row optiscroll">
-        <div data-ng-repeat="category in landCategories" class="row category">
+        <div data-ng-repeat="category in landCategories | orderBy:'priority'" class="row category">
             <div class="categoryLB col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="row">
                     <p class="col-md-4 col-lg-4 col-xl-4">{{category.name}}</p>
