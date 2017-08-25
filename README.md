@@ -1,3 +1,23 @@
+# Living Goods Landing Page
+
+The landing page ....
+
+# Installation
+
+1. Clone the repo from [Github](https://github.com/livinggoods/landing-page.git)
+2. Checkout master branch
+```
+ git checkout master
+```
+
+## Database creation
+1. Step one
+`command here`
+2. step 2
+
+## testing 
+
+
 # [Start Bootstrap](http://startbootstrap.com/) - [Landing Page](http://startbootstrap.com/template-overviews/landing-page/)
 
 [Landing Page](http://startbootstrap.com/template-overviews/landing-page/) is a multipurpose landing page template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
