@@ -17,6 +17,7 @@ mainApp.controller('mainController', ['$scope', '$window', '$http', function($sc
     }).success(function(response){
         $scope.landCategories = [];
         for (var category in response.categories) {
+            response.categories[category].apps = $scope.toArray(response.categories[category].apps);
         	$scope.landCategories.push(response.categories[category]);
         }
     });
@@ -24,5 +25,14 @@ mainApp.controller('mainController', ['$scope', '$window', '$http', function($sc
     $scope.launch = function (url) {
       var win = window.open(url, '_blank');
       win.focus();
+    }
+
+    $scope.toArray = function (apps) {
+        var appsArray = [];
+        for(app in apps){
+            appsArray.push(apps[app]);
+        }
+
+        return appsArray;
     }
 }]);
