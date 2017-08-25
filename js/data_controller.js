@@ -22,6 +22,7 @@ mainApp.controller('mainController', ['$scope', '$window', '$http', function($sc
 
             for(app in response.categories[category].apps){
                 response.categories[category].apps[app].links.urls = $scope.toArray(response.categories[category].apps[app].links.urls);
+                response.categories[category].apps[app].priority = parseInt(response.categories[category].apps[app].priority);
             }
         }
     });
