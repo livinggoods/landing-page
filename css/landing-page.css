@@ -93,7 +93,7 @@ footer{
 }
 
 .app{
-    height: 450px;
+    min-height: 450px;
     margin-bottom: 17px;
 }
 
