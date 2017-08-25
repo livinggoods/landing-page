@@ -46,7 +46,7 @@
                     <p class="col-md-4 col-lg-4 col-xl-4">{{category.name}}</p>
                 </div>
             </div>
-            <div class="app col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" data-ng-repeat="app in category.apps | toArray:true | orderBy:'priority'">
+            <div class="app col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" data-ng-repeat="app in category.apps | orderBy:app.priority">
                 <div class="appFrame" data-ng-if="app.links.count==1" data-ng-click="launch(app.links.urls[0])">
                     <div class="appImg" style="background-image: url({{app.image}});"></div>
                     <p class="appLink">{{app.name}}</p>
@@ -56,7 +56,9 @@
                     <div class="appImg" style="background-image: url({{app.image}});"></div>
                     <p class="appLink">{{app.name}}</p>
                     <p class="appDesc2">{{app.description}}</p>
-                    <label data-ng-repeat="(link, url) in app.links.urls">{{url.name}}</label>
+                    <div class="appLinkBtn">
+                        <button data-ng-repeat="(link, url) in app.links.urls">{{url.name}}</button>
+                    </div>
                 </div>
             </div>
         </div>
