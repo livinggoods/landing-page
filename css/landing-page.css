@@ -142,15 +142,9 @@ footer{
     transition: all 0.5s ease;
 }
 
-.appFrame2{
+.appFrame2:hover{
     box-shadow: 0px 0px 13px #666;
     transition: all 0.2s ease;
-}
-
-.appFrame2 > label{
-    text-align: center;
-    height: 10%;
-    width: 50%;
 }
 
 .app .appImg{
@@ -175,6 +169,7 @@ footer{
 
 .app .appDesc{
     width: 100%;
+    margin-bottom: 0px;
     padding: 5% 3%;
     font-size: 1.1em;
     font-family: lato;
@@ -182,10 +177,45 @@ footer{
 }
 
 .app .appDesc2{
-    height: 40%;
+    margin-bottom: 0px;
     width: 100%;
     padding: 5% 3%;
     font-size: 1.1em;
     font-family: lato;
     color: #444;
+}
+
+.appLinkBtn{
+    height: 10%;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.appLinkBtn > button{
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    margin-bottom: 0px;
+    height: 100%;
+    width: 50%;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #47b;
+    color: #eee;
+    transition: all 0.3s ease;
+}
+
+button:nth-child(1):after{
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    width: 1px;
+    height: 80%;
+    background-color: #555;
 }
