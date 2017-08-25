@@ -12,8 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 				while ($row = $result->fetch_assoc()) {
 					$category_id = $row['id'];
 					$name = $row['name'];
+					$category_priority = $row['priority'];
 					$category_array[$category_id]['id'] = $category_id;
 					$category_array[$category_id]['name'] = $name;
+					$category_array[$category_id]['priority'] = $category_priority;
 				}
 			}
 
@@ -53,8 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 				$data_array = array();
 				while ($row = $result->fetch_assoc()) {
 					$category = $row['category'];
-					$category_priority = $row['priority'];
 					$category_name = $category_array[$category]['name'];
+					$cat_priority = $category_array[$category]['priority'];
 					$app_name = $row['name'];
 					$app_image = $row['image'];
 					$app_description = $row['description'];
@@ -79,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 						array_push($category_name, $data_array);
 						$data_array[$category_name]['name'] = $category_name;
-						$data_array[$category_name]['priority'] = $category_priority;
+						$data_array[$category_name]['priority'] = $cat_priority;
 						$data_array[$category_name]['apps'] = array();
 
 						$data_array[$category_name]['apps'][$app_name] = $tmp_app;
