@@ -124,13 +124,13 @@ footer{
     overflow: hidden;
     cursor: pointer;
     border: 1px solid #555;
-    box-shadow: 0px 0px 5px #666;
+    box-shadow: 0px 0px 3px #666;
     background-color: #fff;
     transition: all 0.5s ease;
 }
 
 .appFrame:hover{
-    box-shadow: 0px 0px 13px #666;
+    box-shadow: 0px 0px 9px #666;
     transition: all 0.2s ease;
 }
 
@@ -140,13 +140,13 @@ footer{
     margin-bottom: 0px;
     overflow: hidden;
     border: 1px solid #555;
-    box-shadow: 0px 0px 5px #666;
+    box-shadow: 0px 0px 3px #666;
     background-color: #fff;
     transition: all 0.5s ease;
 }
 
 .appFrame2:hover{
-    box-shadow: 0px 0px 13px #666;
+    box-shadow: 0px 0px 9px #666;
     transition: all 0.2s ease;
 }
 
@@ -156,7 +156,8 @@ footer{
     background-size: cover;
 }
 
-.app .appLink{
+.appLink{
+    position: relative;
     width: 100%;
     height: 10%;
     display: block;
@@ -167,10 +168,19 @@ footer{
     text-align: center;
     padding: 5px;
     box-sizing: border-box;
-    box-shadow: 0px 3px 5px 0px #999;
 }
 
-.app .appDesc{
+.appLink:after{
+    content: "";
+    width: 80%;
+    height: 1px;
+    position: absolute;
+    left: 10%;
+    bottom: 0px;
+    background-color: #666;
+}
+
+.appDesc{
     width: 100%;
     margin-bottom: 0px;
     padding: 5% 3%;
@@ -179,7 +189,7 @@ footer{
     color: #444;
 }
 
-.app .appDesc2{
+.appDesc2{
     margin-bottom: 0px;
     width: 100%;
     padding: 5% 3%;
