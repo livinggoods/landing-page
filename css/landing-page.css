@@ -31,6 +31,13 @@ footer{
     font-weight: 600;
 }
 
+#nav{
+    padding: 5px 0px;
+    box-shadow: 0px 2px 8px 0px #cacaca;
+    position: relative;
+    z-index: 5;
+}
+
 #logo{
     background-image: url(/img/LG_logo_Blue_Vector.jpg);
     background-repeat: no-repeat;
@@ -47,7 +54,7 @@ footer{
     color: #468;
     font-size: 1.5em;
     text-align: center;
-    padding: 3%;
+    padding: 8%;
     box-sizing: border-box;
 }
 
