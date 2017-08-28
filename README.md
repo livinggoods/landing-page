@@ -31,7 +31,9 @@ Create the links table with the following columns.
 * id
 * url
 * name
-`CREATE TABLE links (id INT, url VARCHAR(50), name VARCHAR(20));`
+```
+CREATE TABLE links (id INT, url VARCHAR(50), name VARCHAR(20));
+```
 
 Create the categories table, with the following columns.
 * id
