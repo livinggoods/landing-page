@@ -28,26 +28,26 @@ USE landingpage;
 
 ### Create tables
 Create the links table with the following columns.
-*id
-*url
-*name
+* id
+* url
+* name
 `CREATE TABLE links (id INT, url VARCHAR(50), name VARCHAR(20));`
 
 Create the categories table, with the following columns.
-*id
-*name
-*priority
+* id
+* name
+* priority
 ```
 CREATE TABLE categories (id INT NOT NULL, name VARCHAR(20), priority INT NOT NULL);
 ```
 
 Create the application table, with the following columns.
-*name
-*image
-*description
-*category
-*id
-*priority
+* name
+* image
+* description
+* category
+* id
+* priority
 ```
 CREATE TABLE application (name VARCHAR(20), image VARCHAR(), description TEXT, category INT, id INT, priority INT);
 ```
