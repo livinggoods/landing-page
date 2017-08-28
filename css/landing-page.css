@@ -108,9 +108,9 @@ footer{
 
 .categoryLB{
     font-size: 2.1em;
+    color: #444;
     font-weight: 600;
     font-family: lato;
-    color: #222;
 }
 
 .categoryLB > p{
