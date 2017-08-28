@@ -1,27 +1,64 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Landing Page](http://startbootstrap.com/template-overviews/landing-page/)
+# Overview
+This is a site where you can conveniently access applications made and used by [Living goods](https://livinggoods.org/)
 
-[Landing Page](http://startbootstrap.com/template-overviews/landing-page/) is a multipurpose landing page template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+# Instalation
+## Clone the repository.
+'git clone https://github.com/livinggoods/landing-page.git'
 
-## Getting Started
+## Checkout master.
+'git checkout master'
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git`
-* Fork the repo
+# Deploying.
+## Create a database.
+In MySql run the command
+'CREATE DATABASE landingpage;'
 
-## Bugs and Issues
+Use the landing page Database
+'USE landingpage;'
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-landing-page/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/).
+## Create tables
+Create the links table with the following columns
+*id
+*url
+*name
+'CREATE TABLE links (id INT, url VARCHAR(50), name VARCHAR(20));'
 
-## Creator
+Create the categories table, with the following columns
+*id
+*name
+*priority
+'CREATE TABLE categories (id INT NOT NULL, name VARCHAR(20), priority INT NOT NULL);'
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+Create the application table, with the following columns
+*name
+*image
+*description
+*category
+*id
+*priority
+'CREATE TABLE application (name VARCHAR(20), image VARCHAR(), description TEXT, category INT, id INT, priority INT);'
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+## Images
+Create an images folder at the root of the project and name it "img"
+'mkdir img'
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+put all your images in this folder.
 
-## Copyright and License
+## npm modules
+You will need to install node js and npm first
 
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/gh-pages/LICENSE) license.
+First install nodejs
+$'sudo apt-get update'
+$'sudo apt-get install nodejs'
+
+Next install npm
+'sudo apt-get install npm'
+
+### Install bootstrap with npm
+$'npm install bootstrap@4.0.0-alpha.6'
+
+### Install font-awesome with npm
+$'npm install font-awesome'
+
+### Install optiscroll for custom scroll bars
+$'npm install optiscroll'
