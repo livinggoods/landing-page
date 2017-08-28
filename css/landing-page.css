@@ -31,16 +31,12 @@ footer{
     font-weight: 600;
 }
 
-#nav{
-    height: 10%;
-}
-
 #logo{
     background-image: url(/img/LG_logo_Blue_Vector.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 100%;
+    height: 40px;
 }
 
 #links{
@@ -48,9 +44,8 @@ footer{
 }
 
 #links div{
-    height: 86%;
     color: #468;
-    font-size: 1.3em;
+    font-size: 1.5em;
     text-align: center;
     padding: 3%;
     box-sizing: border-box;
@@ -61,8 +56,13 @@ footer{
     cursor: pointer;
 }
 
+#links div:hover > div[id="workplace"]{
+    background-color: #47b;
+}
+
 #workplace{
     width: 25px;
+    height: 25px;
     margin: auto;
     background-image: url(/img/workplace.jpg);
     background-size: cover;
@@ -70,10 +70,6 @@ footer{
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-#workplace:hover{
-    background-color: #47b;
 }
 
 .optiscroll-vtrack:hover {
