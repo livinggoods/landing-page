@@ -1,9 +1,8 @@
 # images folder
 img/
 
+# node modules
+node_modules/
+
 #fonts folders
 fonts/
-font-awesome/
-
-#bootstrap
-bootstrap-4
