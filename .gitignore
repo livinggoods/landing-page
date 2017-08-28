@@ -3,6 +3,7 @@ img/
 
 # node modules
 node_modules/
+package-lock.json
 
 #fonts folders
 fonts/
