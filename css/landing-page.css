@@ -149,10 +149,11 @@ footer{
     transition: all 0.2s ease;
 }
 
-.app .appImg{
+.appImg{
     height: 40%;
     width: 100%;
     background-size: cover;
+    background-position: center;
 }
 
 .appLink{
