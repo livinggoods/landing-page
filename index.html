@@ -8,16 +8,16 @@
 	<link rel="icon" type="image/png" href="/img/lg.PNG"/> 
 
     <!-- Bootstrap Core CSS -->
-    <link href="/bootstrap-4/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- font awesome -->
-    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
+    <link href="/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- optiscroll CSS -->
+    <link href="/node_modules/optiscroll/dist/optiscroll.css" rel="stylesheet"/>
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet"/>
-
-    <!-- optiscroll CSS -->
-    <link href="css/optiscroll.css" rel="stylesheet"/>
 
 </head>
 
@@ -25,7 +25,7 @@
 
     <div class="row" id="nav">
         <div id="logo" class="col-4 col-sm-4 col-md-4 col-xl-4 col-lg-4" data-ng-click="launch('https://livinggoods.org/')"></div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 offset-lg-4 col-xl-4 offset-xl-4">
             <div class="row" id="links">
                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                     <div id="workplace"></div>
@@ -71,16 +71,16 @@
     
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap-4/js/bootstrap.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- angular.js -->
     <script src="js/angular.min.js"></script>
 
     <!-- optiscroll.js for custom scroll bars -->
-    <script type="text/javascript" src="js/optiscroll.min.js"></script>
+    <script src="/node_modules/optiscroll/dist/optiscroll.min.js"></script>
 
     <!-- script that gets data from the Database -->
     <script src="js/data_controller.js"></script>
