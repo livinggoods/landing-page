@@ -25,7 +25,26 @@
 </head>
 
 <body data-ng-app="mainApp" class="container-fluid" data-ng-controller="mainController">
-
+    <div id="loading" class="loading">
+        <div id="loading-elements">
+            <div id="loading-logo"></div>
+            <svg id="clip-text" height="0" width="0">
+                <defs>
+                    <clipPath id="loading-text">
+                        <text x="5" y="1em"font-family="lato" font-size="2em" font-weight="600">Loading</text>
+                    </clipPath>
+                </defs>
+            </svg>
+            <div id="clipped-box">
+                <div id="clipped-box-gradient"></div>
+            </div>
+            <svg id="loadbar-container">
+                <line id="loading-bar-mini-top" x1="0" y1="11" x2="120" y2="11"></line>
+                <line id="loading-bar" x1="0" y1="15" x2="120" y2="15"></line>
+                <line id="loading-bar-mini" x1="0" y1="19" x2="120" y2="19"></line>
+            </svg>
+        </div>
+    </div>
     <div class="row" id="nav">
         <div id="logo" class="col-4 col-sm-4 col-md-4 col-xl-4 col-lg-4" ></div>
         <div class="col-4 offset-4 col-sm-4 offset-sm-4 col-md-3 offset-md-5 col-lg-3 offset-lg-5 col-xl-2 offset-xl-6">
