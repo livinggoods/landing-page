@@ -7,3 +7,6 @@ package-lock.json
 
 #fonts folders
 fonts/
+
+#php dev sql connection
+php/sqlConnection.php
