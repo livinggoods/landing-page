@@ -51,11 +51,19 @@ Create the application table, with the following columns.
 * id
 * priority
 ```
-CREATE TABLE application (name VARCHAR(20), image VARCHAR(), description TEXT, category INT, id INT, priority INT);
+CREATE TABLE application (name VARCHAR(20), image VARCHAR(20), description TEXT, category INT, id INT, priority INT);
 ```
 
 ## Access to the database
-First rename `sqlConnection.tmp.php` to `sqlConnection.php`
+First rename
+```
+sqlConnection.tmp.php
+```
+to
+```
+sqlConnection.php
+```
+
 In the `sqlConnection.php` file, add the neccessary details that will give you access to the landing page database.
 
 The details needed are:
