@@ -1,14 +1,14 @@
-var productScrollElement = document.querySelector('#apps');
-var myOptiscrollInstance = new Optiscroll(productScrollElement, {
-	forceScrollbars: true
-});
+angular.element(document).ready(function () {
+    var productScrollElement = document.querySelector('#apps');
+    var myOptiscrollInstance = new Optiscroll(productScrollElement, {
+        forceScrollbars: true
+    });
 
-var mainApp;
+    var mainApp;
 
-mainApp = angular.module('mainApp', []);
+    mainApp = angular.module('mainApp', []);
 
-mainApp.controller('mainController', ['$scope', '$window', '$http', function($scope, $window, $http) {
-    angular.element(document).ready(function () {
+    mainApp.controller('mainController', ['$scope', '$window', '$http', function($scope, $window, $http) {
         $http({
             method: "GET",
             url: "php/front-end_endpoint.php",
@@ -41,5 +41,6 @@ mainApp.controller('mainController', ['$scope', '$window', '$http', function($sc
 
             return elementsArray;
         }
-    });
-}]);
+
+    }]);
+});
