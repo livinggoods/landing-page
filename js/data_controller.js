@@ -9,9 +9,9 @@ mainApp = angular.module('mainApp', []);
 
 mainApp.controller('mainController', ['$scope', '$window', '$http', function($scope, $window, $http) {
     angular.element(document).ready(function () {
-        /*var loadScreen = document.querySelector("#loading");
+        var loadScreen = document.querySelector("#loading");
         loadScreen.classList.toggle("loading");
-        loadScreen.classList.toggle("loaded");*/
+        loadScreen.classList.toggle("loaded");
         
         $http({
             method: "GET",
