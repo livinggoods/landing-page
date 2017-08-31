@@ -54,6 +54,16 @@ Create the application table, with the following columns.
 CREATE TABLE application (name VARCHAR(20), image VARCHAR(), description TEXT, category INT, id INT, priority INT);
 ```
 
+## Access to the database
+First rename `sqlConnection.tmp.php` to `sqlConnection.php`
+In the `sqlConnection.php` file, add the neccessary details that will give you access to the landing page database.
+
+The details needed are:
+* Username
+* Password
+* Servername or ip address
+* Database name
+
 ## Images
 Create an images folder at the root of the project and name it "img".
 ```
