@@ -27,13 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 					$link_id = $lnkrow['id'];
 					$link_url = $lnkrow['url'];
 					$link_name = $lnkrow['name'];
-					if (in_array($link_id, $links_array)) {
+					if (array_key_exists($link_id, $links_array)) {
 						$links_array[$link_id]['count']++;
 
 						$links_array[$link_id]['urls'][$link_name]['url'] = $link_url;
 						$links_array[$link_id]['urls'][$link_name]['name'] = $link_name;
 					}else{
-						array_push($links_array, $link_id);
 						$links = array();
 						$links['count'] = 1;
 						$links['urls'] = array();
